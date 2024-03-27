@@ -1,0 +1,30 @@
+﻿
+@section Scripts{
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/filme")
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>Nome</th>
+            <th>Lancamento</th>
+            <th>Genero</th>
+            <th>Produtora</th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: filmes">
+        <tr>
+            <td data-bind="text:Codigo"></td>
+            <td data-bind="text:Nome"></td>
+            <td data-bind="text:Ano_Lancamento"></td>
+            <td data-bind="text:Genero"></td>
+            <td data-bind="text:Produtora"></td>
+            <td>
+                <button>Editar</button>
+                <button>Excluir</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
